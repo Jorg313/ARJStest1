@@ -7,8 +7,13 @@
 	
     <body style="margin : 0px; overflow: hidden;">
       <a-scene embedded arjs>
-      <a-marker preset="hiro">       
-	      <button onclick="window.location.href = 'https://de.w3docs.com';">Hier klicken</button>
+      <a-marker preset="hiro">    
+	      
+	        <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+		<button>
+     HIDE OBJECTS
+    </button>
+	</div>
  <a-entity
 		position="0.5 -2 -0.5"
 		scale="0.10 0.10 0.10"
