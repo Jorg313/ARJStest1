@@ -11,7 +11,8 @@
           // here you can change also a-scene or a-entity properties, like
           // changing your 3D model source, size, position and so on
           // or you can just open links, trigger actions...
-          alert("Hi there!");
+        href=“https://www.tutorialscollection.com/”
+          // alert("Hi there!");
         });
     };
   </script>
@@ -39,11 +40,12 @@
     }
   </style>
   <body style="margin : 0px; overflow: hidden;">
-    <div class="buttons">
-      <button class="say-hi-button">SAY HI!</button>
-    </div>
+  
     <a-scene embedded arjs>
       <a-marker preset="hiro">
+            <div class="buttons">
+      <button class="say-hi-button">SAY HI!</button>
+    </div>
         <a-entity
           position="0 0 0"
           scale="0.05 0.05 0.05"
