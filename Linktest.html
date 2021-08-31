@@ -1,8 +1,5 @@
-<html>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <!-- we import arjs version without NFT but with marker + location based support -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-	<script>
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<script>
   AFRAME.registerComponent("mylink", {
     init: function() {
     this.el.addEventListener("click", (e)=> {
@@ -12,15 +9,12 @@
   })
 </script>
 
-	
-    <body style="margin : 0px; overflow: hidden;">
-     
+<body>
+
   <a-scene cursor="rayOrigin: mouse">
-    <a-box position="0.5 0.5 0.5" color="blue"></a-box>
-    <a-text color="black" position="1 1 -2" value="Jorggithub" mylink="href: https://github.com/Jorg313/ARJStest1;"></a-text>
+    <a-box position="0 0 -2" color="blue"></a-box>
+    <a-text color="black" position="1 1 -2" value="goToSchatzkin" mylink="href: https://schatzkin.com;"></a-text>
     <a-entity position="0 1.6 -2" link="highlighted: true; highlightedColor:#000000; backgroundColor: red; href: https://schatzkin.com; titleColor: black; title: Back to website;image: https://i.imgur.com/wjobVTN.jpg  "></a-entity>
 
   </a-scene>
-    </body>
-</html>
 
