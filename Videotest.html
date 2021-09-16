@@ -11,17 +11,17 @@
        
 	const playbtn = document.querySelector("#Play")
    	const stopbtn = document.querySelector("#Stop")
- 	document.querySelector("#judas").pause()
+ 	this.vid = document.querySelector("#judas").pause()
       
             // handle image clicking
             playbtn.addEventListener("click", e => {
-		   document.querySelector("#judas").play()
-		     console.log("Play it")
+		   this.vid.pause();
+		     console.log("Play it");
                
             })
              stopbtn.addEventListener("click", e => {
-		      console.log("Stop it")
-               	      document.querySelector("#judas").play()
+		      console.log("Stop it");
+               	     this.vid.pause();
             })
         }
     })
