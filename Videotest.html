@@ -3,28 +3,53 @@
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	<script src="./trackedui.js"></script>
+	
+	  <script>
+    AFRAME.registerComponent("ui-logic", {
+        init: function() {
+          //  const rangebtn = document.querySelector("#rangeicon")
+          //  const coinbtn = document.querySelector("#coinicon")
+			const playbtn = document.querySelector("#Play")
+   const stopbtn = document.querySelector("#Stop")
+            // handle image clicking
+            playbtn.addEventListener("click", e => {
+		    
+		     console.log("I'm doing it")
+                window.location.replace("http://stackoverflow.com");
+            })
+             stopbtn.addEventListener("click", e => {
+		       console.log("I'm doing it")
+                window.location.replace("http://stackoverflow.com");
+            })
+        }
+    })
+	
+</script>
+	
+<!-- UI -->
+        <div id="UI" style="position: fixed; z-index: 1000; display: none;">
+            <div style="margin-left: -48px;border:1px solid black; background-color: rgba(75, 2, 59, 0.363);">
+               <img id="Play" src="models/Play.png" width="64px">
+                <span style="width: 32px; height: 32px">&nbsp;</span>   
+	 <img id="Stop" src="models/Stop.png" width="64px">
+            </div>
+        </div>
 	
 	
-    <body style="margin : 0px; overflow: hidden;">
-      <a-scene embedded arjs>
-      <a-marker preset="hiro">    
+   <a-scene embedded arjs renderer="logarithmicDepthBuffer: true" vr-mode-ui="enabled: false"> 
+    <a-marker smooth="true" preset="hiro" tracked-ui="element: #UI; offset: 0 200" ui-logic>
+         
 	      
-	        <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-		<button>
-     HIDE OBJECTS
-    </button>
-	</div>
- <a-entity
-		position="0.5 -2 -0.5"
-		scale="0.10 0.10 0.10"
-		obj-model="obj: url(./models/PenguinBaseMesh.obj);"
-		></a-entity>
+	      
+		  
+ 
 	      
 	  
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
-    </body>
+   
 </html>
 
 
