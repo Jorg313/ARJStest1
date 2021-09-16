@@ -9,19 +9,19 @@
     AFRAME.registerComponent("ui-logic", {
         init: function() {
        
-	const playbtn = document.querySelector("#Play")
-   	const stopbtn = document.querySelector("#Stop")
- 	var vid = document.querySelector("#judas").pause()
+	const playbtn = document.querySelector("#Play");
+   	const stopbtn = document.querySelector("#Stop"):
+ 	let video = document.querySelector("#judas");
       
             // handle image clicking
             playbtn.addEventListener("click", e => {
-		  vid.pause();
+		  video.pause();
 		     console.log("Play it");
                
             })
              stopbtn.addEventListener("click", e => {
 		      console.log("Stop it");
-               	    vid.pause();
+               	    video.pause();
             })
         }
     })
