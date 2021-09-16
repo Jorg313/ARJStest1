@@ -8,10 +8,10 @@
 	  <script>
     AFRAME.registerComponent("ui-logic", {
         init: function() {
-       
+       let el = this.el;
 	const playbtn = document.querySelector("#Play")
    	const stopbtn = document.querySelector("#Stop")
- 	let judas = document.querySelector("#judas");
+ 	let judas =  document.querySelector("#judas");
 		
             // handle image clicking
             playbtn.addEventListener("click", e => {
