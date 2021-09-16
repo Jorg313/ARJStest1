@@ -39,11 +39,12 @@
 	
    <a-scene embedded arjs renderer="logarithmicDepthBuffer: true" vr-mode-ui="enabled: false"> 
 	    <a-assets>
-            <a-asset-item id="video" src="models/Judastest.mp4"></a-asset-item>
+            <a-asset-item id="judas" src="models/Judastest.mp4"></a-asset-item>
         </a-assets>
     <a-marker smooth="true" preset="hiro" tracked-ui="element: #UI; offset: 0 200" ui-logic>
          
-	            
+	    <a-video src="#judas" width="16" height="9" position="0 0 -20"></a-video>
+        
 	  
       </a-marker>
       <a-entity camera></a-entity>
