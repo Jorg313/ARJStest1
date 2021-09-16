@@ -8,19 +8,20 @@
 	  <script>
     AFRAME.registerComponent("ui-logic", {
         init: function() {
-          //  const rangebtn = document.querySelector("#rangeicon")
-          //  const coinbtn = document.querySelector("#coinicon")
-			const playbtn = document.querySelector("#Play")
-   const stopbtn = document.querySelector("#Stop")
+       
+	const playbtn = document.querySelector("#Play")
+   	const stopbtn = document.querySelector("#Stop")
+ 	this.judas = document.querySelector("#judas")
+        this.judas.pause();
             // handle image clicking
             playbtn.addEventListener("click", e => {
-		    
+		    this.judas.play()
 		     console.log("Play it")
                
             })
              stopbtn.addEventListener("click", e => {
-		       console.log("Stop it")
-               
+		      console.log("Stop it")
+               	      this.judas.play()
             })
         }
     })
@@ -42,10 +43,8 @@
             <a-asset-item id="judas" src="models/Judastest.mp4" autoplay loop="true" ></a-asset-item>
         </a-assets>
     <a-marker smooth="true" preset="hiro" tracked-ui="element: #UI; offset: 0 200" ui-logic>
-         
-	    <a-video src="#judas" width="16" height="9" position="0 0 -20"></a-video>
-        
-	  
+               <a-plane position='1 2 -2' scale="2 2 2" width="2" rotation="-90 0 0" material='transparent:true;opacity: 0.7;src:#judas'></a-plane>
+
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
