@@ -1,34 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-    <!-- we import arjs version without NFT but with marker + location based support -->
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-	<script src="./trackedui.js"></script>
-	
-	  <script>
-    AFRAME.registerComponent("ui-logic", {
-        init: function() {
-      
-	var vid =  document.querySelector("#judas");	
-	const playbtn = document.querySelector("#Play")
-   	const stopbtn = document.querySelector("#Stop")
- 	
-		
-            // handle image clicking
-            playbtn.addEventListener("click", e => {
-		  vid.pause();
-		     console.log("Play it");
-               
-            })
-             stopbtn.addEventListener("click", e => {
-		      console.log("Stop it");
-               	    vid.pause();
-            })
-        }
-    })
-	
-</script>
-	
+<head>
+		<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+		<!-- we import arjs version without NFT but with marker + location based support -->
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+		<script src="./trackedui.js"></script>
+</head>
+<body>
+
 <!-- UI -->
         <div id="UI" style="position: fixed; z-index: 1000; display: none;">
             <div style="margin-left: -48px;border:1px solid black; background-color: rgba(75, 2, 59, 0.363);">
@@ -49,6 +28,36 @@
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+
+<script>
+    AFRAME.registerComponent("ui-logic", {
+        init: function() {
+      
+	var vid =  document.querySelector("#judas");	
+	const playbtn = document.querySelector("#Play")
+   	const stopbtn = document.querySelector("#Stop")
+ 	
+		
+            // handle image clicking
+            playbtn.addEventListener("click", e => {
+			Console.log("Error");
+			Console.log(vid);
+			vid.pause();
+		  
+		     console.log("Play it");
+               
+            })
+             stopbtn.addEventListener("click", e => {
+		      console.log("Stop it");
+               	    vid.pause();
+            })
+        }
+    })
+	
+</script>
+
+</body>
+    
    
 </html>
 
