@@ -16,12 +16,14 @@
             // handle image clicking
             playbtn.addEventListener("click", e => {
 			console.log(a);
+		    var vid =  document.querySelector("#judas").play();
 			//vid.Play();
                
             })
              stopbtn.addEventListener("click", e => {
 		   	
 			console.log(a);
+		      var vid =  document.querySelector("#judas").pause();
                	   // vid.pause();
             })
 
@@ -46,7 +48,7 @@
         </a-assets>
     <a-marker smooth="true" preset="hiro" tracked-ui="element: #UI; offset: 0 150" ui-logic>
                <a-plane position='0 0 0' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true;opacity: 0.7;src:#judas'></a-plane>
-vid.pause();
+
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
