@@ -5,30 +5,6 @@
 		<!-- we import arjs version without NFT but with marker + location based support -->
 		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 		<script src="./trackedui.js"></script>
-
-
-
-<!-- UI -->
-        <div id="UI" style="position: fixed; z-index: 1000; display: none;">
-            <div style="margin-left: -48px;border:1px solid black; background-color: rgba(75, 2, 59, 0.363);">
-               <img id="Play" src="models/Play.png" width="64px">
-                <span style="width: 32px; height: 32px">&nbsp;</span>   
-	 <img id="Stop" src="models/Stop.png" width="64px">
-            </div>
-        </div>
-	
-	
-   <a-scene embedded arjs renderer="logarithmicDepthBuffer: true" vr-mode-ui="enabled: false"> 
-	    <a-assets>
-            <a-asset-item id="judas" src="models/Judastest.mp4" autoplay loop="true" ></a-asset-item>
-        </a-assets>
-    <a-marker smooth="true" preset="hiro" tracked-ui="element: #UI; offset: 0 150" ui-logic>
-               <a-plane position='0.5 0.5 0.5' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true;opacity: 0.7;src:#judas'></a-plane>
-
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-
 <script>
     AFRAME.registerComponent("ui-logic", {
         init: function() {
@@ -53,6 +29,28 @@
     })
 	
 </script>
+
+<!-- UI -->
+        <div id="UI" style="position: fixed; z-index: 1000; display: none;">
+            <div style="margin-left: -48px;border:1px solid black; background-color: rgba(75, 2, 59, 0.363);">
+               <img id="Play" src="models/Play.png" width="64px">
+                <span style="width: 32px; height: 32px">&nbsp;</span>   
+	 <img id="Stop" src="models/Stop.png" width="64px">
+            </div>
+        </div>
+	
+	
+   <a-scene embedded arjs renderer="logarithmicDepthBuffer: true" vr-mode-ui="enabled: false"> 
+	    <a-assets>
+            <a-asset-item id="judas" src="models/Judastest.mp4" autoplay loop="false" ></a-asset-item>
+        </a-assets>
+    <a-marker smooth="true" preset="hiro" tracked-ui="element: #UI; offset: 0 150" ui-logic>
+               <a-plane position='0 0 0' scale="1 1 1" width="1" rotation="-90 0 0" material='transparent:true;opacity: 0.7;src:#judas'></a-plane>
+vid.pause();
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+
 
    
 </html>
