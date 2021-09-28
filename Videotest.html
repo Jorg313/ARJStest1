@@ -32,27 +32,26 @@
 <script>
     AFRAME.registerComponent("ui-logic", {
         init: function() {
-      
-	var vid =  document.querySelector("#judas");	
+      var vid =  document.querySelector("#judas");	
 	const playbtn = document.querySelector("#Play")
    	const stopbtn = document.querySelector("#Stop")
  	
 		
             // handle image clicking
             playbtn.addEventListener("click", e => {
-		
-			Console.log(this.vid);
-			
+			Console.log("Error");
+			Console.log(vid);
+			vid.Play();
 		  
-		     Console.log("Play it");
+		     console.log("Play it");
                
             })
              stopbtn.addEventListener("click", e => {
-		     
-			Console.log(this.vid);
-		      Console.log("Stop it");
-               	   
+		   	Console.log("Error");
+			Console.log(vid);
+               	    vid.pause();
             })
+
         }
     })
 	
